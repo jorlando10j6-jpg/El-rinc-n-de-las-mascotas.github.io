@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón de las Mascotas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">El Rincón de las Mascotas</h1>
+            <div class="flex items-center space-x-4">
+                <span class="text-lg">Carrito: <span id="cart-count">0</span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center py-16" style="background-image: url('0')">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h2 class="text-4xl font-bold mb-4">Todo para tu mejor amigo 🐾</h2>
+            <p class="text-lg">Explora nuestra colección de productos de alta calidad para perros, gatos, aves y más.</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="container mx-auto px-4 py-8">
+        <h3 class="text-xl font-semibold mb-4">Filtrar por Categoría</h3>
+        <div class="flex flex-wrap gap-4">
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="all">Todos</button>
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="perros">Perros</button>
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="gatos">Gatos</button>
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="peces">Peces</button>
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="aves">Aves</button>
+            <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-category="accesorios">Accesorios</button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="container mx-auto px-4 py-8">
+        <h3 class="text-xl font-semibold mb-4">Nuestros Productos</h3>
+        <div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Products will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Ubicación</h4>
+                <p>Av. Rio de Janeiro-Sicuani-Lima, Ate</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Atención al Cliente</h4>
+                <p>+51 987 654 321</p>
+                <p>info@elrincondelasmascotas.com</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-blue-400">Facebook</a>
+                    <a href="#" class="hover:text-blue-400">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p>© 2025 El Rincón de las Mascotas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg w-full max-w-md">
+            <h3 class="text-xl font-semibold mb-4">Carrito de Compras</h3>
+            <div id="cart-items" class="mb-4">
+                <p class="text-gray-500">El carrito está vacío 😔</p>
+            </div>
+            <button id="close-cart" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
