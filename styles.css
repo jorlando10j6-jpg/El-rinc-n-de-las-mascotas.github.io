@@ -1,0 +1,10 @@
+/* Custom CSS for additional styling */
+.product-card {
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+.cart-item {
+    border-bottom: 1px solid #e5e7eb;
+}
